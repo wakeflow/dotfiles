@@ -2,6 +2,5 @@
 const { runCommands } = require("./runCommands");
 
 runCommands([
-  'git push',
-  'git pull-request -c',
+  'hub pull-request -p --no-edit',
 ])

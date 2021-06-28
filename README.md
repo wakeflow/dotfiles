@@ -20,11 +20,13 @@ welcoming space for collaboration, and contributors are expected to adhere to th
    - Windows: `scoop install hub`
 
 3. Set up symlinks in your home directory the following files: 
-   - MacOs/Linux example: `ln -s ~/.vimrc /Users/yourName/Dev/vimrc`
-   - Windows example: `mklink ~/.vimrc /Users/yourName/Dev/vimrc`
-     - .vimrc
-     - .zshrc
-     - .aliases
+   - `ln -s ~/.vimrc ~/projects/vimrc`
+   - `ln -s ~/.zshrc ~/projects/zshrc`
+   - `ln -s ~/.aliases ~/projects/aliases`
+    
+4. If you use VSCode, set up symlinks to the settings.json and keybindings.json files:
+   - `ln -s ~/Library/Application Support/Code/User/settings.json ~/projects/settings.json`
+   - `ln -s ~/Library/Application Support/Code/User/keybindings.json ~/projects/keybindings.json`
 
 ## License
 

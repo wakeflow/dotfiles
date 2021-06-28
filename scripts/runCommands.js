@@ -9,13 +9,7 @@ const run = async (command)=>{
       output += data
       process.stdout.write(`${data}`)
      })
-    // p.stderr.on(`data`,data => { 
-    //   console.log(`THIS IS THE ERROR:`)
-    //   console.log(data)
-    //   console.log(`THIS WAS THE ERROR!`)
-    //   process.stdout.write(`${data}`) 
-    //   reject(data)
-    // })
+    p.stderr.on(`data`,data => reject(data))
     p.on('data',d=>output+=d)
     p.on('error',d=>reject(d))
     p.on('exit',()=>resolve(output))
@@ -24,12 +18,12 @@ const run = async (command)=>{
 }
 
 exports.runCommands = async (commands)=>{
-  try{
-    for(command of commands){
+  for(command of commands){
+    try{
       await run(command)
+    }catch(err){
+      console.log(err)
     }
-  }catch(err){
-    console.log(err)
   }
 }
 
