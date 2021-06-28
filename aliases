@@ -1,0 +1,71 @@
+SCRIPTS_PATH='/Users/andreaskater/Dev/dotfiles/scripts'
+
+alias '$'=''
+alias '..'='cd ..'
+
+# Node
+alias nm=nodemon
+alias ccc='node /Users/andreaskater/Dev/ccc/ccc.js'
+alias aaa='node /Users/andreaskater/Dev/ccc/aaa.js'
+alias comp='$SCRIPTS_PATH/createComponent.js'
+
+# General
+alias x=clear
+alias c=clear
+alias cc=clear
+alias copy=pbcopy
+alias ls='ls -1a'
+
+# Wakeflow
+alias rtlf="node /Users/andreaskater/Dev/wakeflow/transfers/cli/rtlf.js"
+alias rtla="node /Users/andreaskater/Dev/wakeflow/transfers/cli/rtla.js"
+alias ltrf="node /Users/andreaskater/Dev/wakeflow/transfers/cli/ltrf.js"
+alias ltra="node /Users/andreaskater/Dev/wakeflow/transfers/cli/ltra.js"
+
+# Firebase
+alias emul='firebase emulators:start --import=firestore_import --export-on-exit=firestore_import'
+alias emulf='firebase emulators:start --only functions'
+alias emulocal='firebase emulators:start --import=emulator-backup --export-on-exit=emulator-backup'
+
+# Feathersjs
+alias fgs='feathers generate service'
+
+# Scripts
+alias mc=$SCRIPTS_PATH/mc.sh
+alias pss=$SCRIPTS_PATH/paste-screenshot.sh
+
+#GIT
+alias gb='git --no-pager branch'
+alias gbo=$SCRIPTS_PATH/git_branch_out.sh
+alias gc='git checkout'
+alias gcap='$SCRIPTS_PATH/scripts/gcap.py'
+alias gcb='git checkout -b'
+alias gcm='git add --all && git commit -m'
+alias gcmp='$SCRIPTS_PATH/gcmp.js'
+alias gcmpw='$SCRIPTS_PATH/gcmpw.js'
+alias gcp='git cherry-pick'
+alias gd='git diff origin/master'
+alias gdb='git checkout master && git branch -D'
+alias gdh='git diff HEAD'
+alias gdrb='git push --delete'
+alias gfp=$SCRIPTS_PATH/git_fix_push.sh
+alias git=hub
+alias gl=$SCRIPTS_PATH/gl.sh
+alias gmp=$SCRIPTS_PATH/git_merge_pull_request.sh
+alias gpr=$SCRIPTS_PATH/git_make_pull_request.js
+alias grbi='git rebase -i'
+alias grc='git add . && git rebase --continue'
+alias gs='git status'
+alias gsf='git show --pretty="" --name-only'
+alias gu=$SCRIPTS_PATH/git_update.js
+
+#Tree
+alias t=tree
+alias tree="tree -I 'node_modules|venv'"
+
+#VIM
+alias v=vim
+
+#ZSH
+alias relaod=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
