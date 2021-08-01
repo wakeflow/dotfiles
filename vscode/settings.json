@@ -136,7 +136,7 @@
   "eslint.debug": true,
   "eslint.lintTask.options": "",
   "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
+    "*.ipynb": "jupyter-notebook"
   },
   "mssql.connections": [
     {
@@ -146,5 +146,9 @@
       "password": "{{put-password-here}}"
     }
   ],
-  "window.zoomLevel": -1
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python"
 }
