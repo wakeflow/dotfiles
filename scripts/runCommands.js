@@ -13,7 +13,6 @@ const run = async command => {
     p.on(`data`,d => output += d)
     p.on(`error`,d => reject(d))
     p.on(`exit`,() => {
-      console.log(`exiting`,output)
       resolve(output)
     })
   })
