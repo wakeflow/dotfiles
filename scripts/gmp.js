@@ -2,7 +2,7 @@
 
 //gmpr = git merge pull request
 
-const { run } = require(`./runCommands`)
+const { run,runCommands } = require(`./runCommands`)
 
 const main = async() => {
   const response = await run(`git branch`)
