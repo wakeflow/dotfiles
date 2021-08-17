@@ -10,7 +10,10 @@ const run = async command => {
       output += data
       process.stdout.write(`${data}`)
     })
-    p.stderr.on(`data`,data => reject(data))
+    p.stderr.on(`data`,data => {
+      console.log(`rejecting stderr`,d)
+      reject(data)
+    })
     p.on(`data`,d => output += d)
     p.on(`error`,d => {
       console.log(`rejecting`,d)
