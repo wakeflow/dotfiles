@@ -22,6 +22,11 @@ const run = async command => {
 exports.run = run
 exports.runCommands = async commands => {
   for(command of commands)
-    await run(command)
+    try{
+      await run(command)
+    }catch(err){
+      console.error(err)
+      process.exit()
+    }
 }
 
