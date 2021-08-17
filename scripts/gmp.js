@@ -12,7 +12,7 @@ const main = async() => {
     `git fetch origin`,
     `git rebase origin/master`,
     `git push -f -q`,
-    `git checkout master`,
+    `git checkout master -q`,
     `git merge ${branch}`,
     `git push`,
     `git push origin --delete ${branch}`,
