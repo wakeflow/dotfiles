@@ -2,6 +2,7 @@
 const { exec } = require(`child_process`)
 
 const run = async command => {
+  console.log(command)
   return new Promise((resolve,reject) => {
     let output = ``
     const p = exec(command)
