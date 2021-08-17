@@ -11,7 +11,7 @@ const main = async() => {
   runCommands([
     `git fetch origin`,
     `git rebase origin/master`,
-    `git push -f`,
+    `git push -f -q`,
     `git checkout master -q`,
     `git merge ${branch}`,
     `git push`,
