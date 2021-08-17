@@ -18,6 +18,7 @@
     "eslint:recommended"
   ],
   "plugins": [
+    "import-quotes"
   ],
   "settings": {
     "react": {

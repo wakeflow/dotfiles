@@ -6,5 +6,5 @@ runCommands([
   'git checkout master',
   'git pull origin master',
   `git checkout -b ${process.argv[2]}`,
-  'git --no-pager log --oneline --decorate --graph --all -n 12',
+  `git push --set-upstream origin ${process.argv[2]}`,
 ])
