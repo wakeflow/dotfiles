@@ -1,7 +1,6 @@
 #!/bin/sh
 
 set -e
-set -o pipefail
 
 clear
 if [ -z "$1" ]
