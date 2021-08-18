@@ -2,7 +2,7 @@
 
 //gdbb = git delete both branches (both local and remote)
 
-const { runCommands } = require(`./runCommands`)
+import { runCommands } from './runCommands.js'
 
 runCommands([
   `git checkout master -q`,
