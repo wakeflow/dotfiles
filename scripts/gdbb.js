@@ -5,7 +5,7 @@
 const { runCommands } = require(`./runCommands`)
 
 runCommands([
-  `git checkout master`,
+  `git checkout master -q`,
   `git branch -D ${process.argv[2]}`,
   `git remote prune origin`,
   `git push --delete origin ${process.argv[2]}`,

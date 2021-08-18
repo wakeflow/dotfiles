@@ -13,7 +13,7 @@ const main = async() => {
     `git rebase origin/master`,
     `git push -f -q`,
     `git checkout master -q`,
-    `git merge ${branch}`,
+    `git merge ${branch} --no-edit --ff-only -m "hello"`,
     `git push`,
     `git push origin --delete ${branch}`,
     `git branch -d ${branch}`,
