@@ -2,22 +2,18 @@
 
 //gmpr = git merge pull request
 
-const { run,runCommands } = require(`./runCommands`)
+import { run,runCommands } from './runCommands.js'
 
-const main = async() => {
-  const response = await run(`git branch`)
-  const branch = response.slice(2).trim()
-  if(branch === `master`) throw new Error(`You are on master branch`)
-  runCommands([
-    `git fetch origin`,
-    `git rebase origin/master`,
-    `git push -f -q`,
-    `git checkout master -q`,
-    `git merge ${branch} --no-edit --ff-only -m "hello"`,
-    `git push`,
-    `git push origin --delete ${branch}`,
-    `git branch -d ${branch}`,
-  ])
-}
-
-main()
+const response = await run(`git branch`)
+const branch = response.split(`\n`).find(line => line.includes(`*`)).slice(2).trim()
+if(branch === `master`) throw new Error(`You are on master branch`)
+runCommands([
+  `git fetch origin -q`,
+  `git rebase origin/master -q`,
+  `git push -f -q`,
+  `git checkout master -q`,
+  `git merge ${branch} --no-edit --ff-only -m "hello"`,
+  `git push -q`,
+  `git push origin --delete ${branch}`,
+  `git branch -d ${branch}`,
+])
