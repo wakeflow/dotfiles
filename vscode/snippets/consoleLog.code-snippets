@@ -68,7 +68,7 @@
     "scope": "javascript,typescript,javascriptreact,typescriptreact",
     "prefix": "l",
     "body": [
-      "console.log(`$1`)",
+      "console.log($1)",
     ],
     "description": "Log output to console"
   },
