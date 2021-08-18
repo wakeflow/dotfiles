@@ -1,9 +1,8 @@
 #!/usr/bin/env node
-const { runCommands } = require("./runCommands");
+import { runCommands } from './runCommands.js'
 
 runCommands([
-  'git add .',
-  `git commit -m "${process.argv[2]}"`,
-  'git push',
-  'git --no-pager log --oneline --decorate --graph --all -n 12',
+  `git add .`,
+  `git commit -m "${process.argv[2]}" -q`,
+  `git push -q`,
 ])
