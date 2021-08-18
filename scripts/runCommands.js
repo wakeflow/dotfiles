@@ -2,7 +2,7 @@
 import { exec } from 'child_process'
 
 export const run = async(command,quiet) => {
-  console.log(`>>>`,command,quiet ? `(quiet)` : ``)
+  console.log(` >>`,command,quiet ? `(quiet)` : ``)
   return new Promise((resolve,reject) => {
     let output = ``
     const p = exec(command)

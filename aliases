@@ -42,7 +42,6 @@ alias gcap=$SCRIPTS_PATH/gcap.js
 alias gcb='git checkout -b'
 alias gcm='git add --all && git commit -m'
 alias gcmp='$SCRIPTS_PATH/gcmp.js'
-alias gcmpw='$SCRIPTS_PATH/gcmpw.js'
 alias gcp='git cherry-pick'
 alias gd='git diff origin/master'
 alias gdb='git checkout master && git branch -D'
