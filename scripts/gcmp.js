@@ -3,7 +3,7 @@ import { runCommands } from './runCommands.js'
 
 runCommands([
   `git add .`,
-  `git commit -m "${process.argv[2]}"`,
+  `git commit -m "${process.argv[2]}" -q`,
   `git push -q`,
-  `git --no-pager log --oneline --decorate --graph --all -n 12`,
+  `gl`,
 ])
