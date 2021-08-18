@@ -1,10 +1,8 @@
 #!/usr/bin/env node
-const { runCommands } = require(`./runCommands`)
+import { run } from './runCommands.js'
 
-runCommands([
-  `git fetch`,
-  `git checkout master`,
-  `git pull origin master`,
-  `git checkout -b ${process.argv[2]}`,
-  `git push --set-upstream origin ${process.argv[2]}`,
-])
+await run(`git fetch`)
+await run(`git checkout master -q`)
+await run(`git pull origin master -q`)
+await run(`git checkout -b ${process.argv[2]} -q`)
+await run(`git push --set-upstream origin ${process.argv[2]}`,true)
