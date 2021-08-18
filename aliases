@@ -57,7 +57,7 @@ alias grc='git add . && git rebase --continue'
 alias grhom='git reset --hard origin/master'
 alias gs='git status'
 alias gsf='git show --pretty="" --name-only'
-alias gu=$SCRIPTS_PATH/gu.js="" --name-only'
+alias gu=$SCRIPTS_PATH/gu.js
 alias gu=$SCRIPTS_PATH/gu.js
 
 #Tree
