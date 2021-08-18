@@ -14,24 +14,6 @@ imap <space><space> <Esc>
 set clipboard=unnamed
 set mouse=a
 
-" ale
-let g:ale_linters = {
-      \   'javascript': ['eslint','stylelint'],
-      \   'typescript': ['tslint'],
-      \   'python': ['flake8', 'pylint']
-      \ }
-let g:ale_fixers = {
-      \   'markdown': ['trim_whitespace'],
-      \   'javascript': ['eslint', 'remove_trailing_lines', 'trim_whitespace'],
-      \   'typescript': ['tslint','remove_trailing_lines', 'trim_whitespace'],
-      \   'python': ['autopep8', 'yapf', 'remove_trailing_lines', 'trim_whitespace']
-      \}
-let g:ale_fix_on_save = 1
-let g:ale_lint_delay = 1000
-let g:ale_completion_enabled = 1
-let g:ale_ruby_rails_best_practices_executable = 'bundle'
-let g:ale_ruby_rubocop_executable = 'bundle'
-
 nmap <silent> [r <Plug>(ale_previous_wrap)
 nmap <silent> ]r <Plug>(ale_next_wrap)
 

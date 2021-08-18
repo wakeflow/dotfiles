@@ -45,19 +45,19 @@ alias gcmp='$SCRIPTS_PATH/gcmp.js'
 alias gcp='git cherry-pick'
 alias gd='git diff origin/master'
 alias gdb='git checkout master && git branch -D'
-alias gdrb='git push --delete origin'
 alias gdbb=$SCRIPTS_PATH/gdbb.js
 alias gdh='git diff HEAD'
+alias gdrb='git push --delete origin'
 alias gfp=$SCRIPTS_PATH/git_fix_push.sh
-# alias git=hub
 alias gl=$SCRIPTS_PATH/gl.sh
 alias gmp=$SCRIPTS_PATH/gmp.js
 alias gpr='hub pull-request -p --no-edit'
 alias grbi='git rebase -i'
-alias grhom='git reset --hard origin/master'
 alias grc='git add . && git rebase --continue'
+alias grhom='git reset --hard origin/master'
 alias gs='git status'
 alias gsf='git show --pretty="" --name-only'
+alias gu=$SCRIPTS_PATH/gu.js="" --name-only'
 alias gu=$SCRIPTS_PATH/gu.js
 
 #Tree
