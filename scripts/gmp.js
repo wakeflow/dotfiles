@@ -13,7 +13,7 @@ runCommands([
   `git push -f -q`,
   `git checkout master -q`,
   `git merge ${branch} --no-edit --ff-only -m "hello"`,
-  `git push`,
+  `git push -q`,
   `git push origin --delete ${branch}`,
   `git branch -d ${branch}`,
 ])
