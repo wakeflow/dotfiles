@@ -6,23 +6,30 @@ export const run = async(command,quiet) => {
   return new Promise((resolve,reject) => {
     let output = ``
     const p = exec(command)
+
     p.stdout.on(`data`,data => { 
       output += data
-      process.stdout.write(`${data}`)
+      if(!quiet) process.stdout.write(`${data}`)
     })
+
     if(!quiet)
       p.stderr.on(`data`,data => {
         console.log(`rejecting stderr`,data)
         reject(data)
       })
+
     p.on(`data`,d => output += d)
-    p.on(`error`,d => {
-      console.log(`rejecting`,d)
-      reject(d)
-    })
+
+    if(!quiet)
+      p.on(`error`,d => {
+        console.log(`rejecting`,d)
+        reject(d)
+      })
+
     p.on(`exit`,() => {
       resolve(output)
     })
+
   })
 
 }
