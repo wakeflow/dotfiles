@@ -4,6 +4,6 @@ import { runCommands } from './runCommands.js'
 runCommands([
   `git add .`,
   `git commit -m "${process.argv[2]}"`,
-  `git push`,
+  `git push -q`,
   `git --no-pager log --oneline --decorate --graph --all -n 12`,
 ])
