@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-const { exec } = require(`child_process`)
+import { exec } from 'child_process'
 
-const run = async command => {
-  console.log(`>>>`,command)
+export const run = async(command,quiet) => {
+  console.log(`>>>`,command,quiet ? `(quiet)` : ``)
   return new Promise((resolve,reject) => {
     let output = ``
     const p = exec(command)
@@ -10,10 +10,11 @@ const run = async command => {
       output += data
       process.stdout.write(`${data}`)
     })
-    p.stderr.on(`data`,data => {
-      console.log(`rejecting stderr`,data)
-      reject(data)
-    })
+    if(!quiet)
+      p.stderr.on(`data`,data => {
+        console.log(`rejecting stderr`,data)
+        reject(data)
+      })
     p.on(`data`,d => output += d)
     p.on(`error`,d => {
       console.log(`rejecting`,d)
@@ -26,9 +27,8 @@ const run = async command => {
 
 }
 
-exports.run = run
-exports.runCommands = async commands => {
-  for(command of commands)
+export const runCommands = async commands => {
+  for(let command of commands)
     try{
       await run(command)
     }catch(err){
