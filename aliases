@@ -1,4 +1,4 @@
-SCRIPTS_PATH=$HOME/Dev/dotfiles/scripts
+SCRIPTS_PATH=~/projects/dotfiles/scripts
 
 alias '$'=''
 alias '..'='cd ..'
@@ -58,6 +58,7 @@ alias grhom='git reset --hard origin/master'
 alias gs='git status'
 alias gsf='git show --pretty="" --name-only'
 alias gu=$SCRIPTS_PATH/gu.js
+alias gpup=$SCRIPTS_PATH/gpup.js
 
 #Tree
 alias t=tree
