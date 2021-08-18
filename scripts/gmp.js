@@ -9,7 +9,7 @@ const branch = response.slice(2).trim()
 if(branch === `master`) throw new Error(`You are on master branch`)
 runCommands([
   `git fetch origin -q`,
-  `git rebase origin/master`,
+  `git rebase origin/master -q`,
   `git push -f -q`,
   `git checkout master -q`,
   `git merge ${branch} --no-edit --ff-only -m "hello"`,
