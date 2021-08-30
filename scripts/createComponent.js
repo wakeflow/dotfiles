@@ -1,8 +1,10 @@
 #!/usr/bin/env node
-const fs = require(`fs`)
-const path = require(`path`)
-const { camelCase,pascalCase } = require(`change-case`)
-const { exec } = require(`child_process`)
+import fs from 'fs'
+import path from 'path'
+import changeCase from 'change-case'
+import { exec } from 'child_process'
+
+const { camelCase,pascalCase } = changeCase
 
 const componentsDir = path.join(process.cwd(),`src`,`components`)
 if(!fs.existsSync(componentsDir)) {
