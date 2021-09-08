@@ -1,4 +1,4 @@
-SCRIPTS_PATH=~/projects/dotfiles/scripts
+SCRIPTS_PATH=~/Dev/dotfiles/scripts
 
 alias '$'=''
 alias '..'='cd ..'
