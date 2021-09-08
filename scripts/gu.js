@@ -2,12 +2,14 @@
 
 //gu = git update
 
-import { runCommands } from './runCommands.js'
+import { run } from './runCommands.js'
 
-runCommands([
-  `git fetch -q`,
-  `git checkout master -q`,
-  `git pull origin master -q`,
-  `git remote prune origin`,
-])
+const response = await run(`git branch`,true)
+const branch = response.split(`\n`).find(line => line.includes(`*`)).slice(2).trim()
+
+await run(`git fetch -q`)
+await run(`git checkout master -q`)
+await run(`git pull origin master -q`)
+await run(`git remote prune origin`)
+await run(`git checkout ${branch}`,true)
 
