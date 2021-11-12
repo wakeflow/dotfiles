@@ -27,6 +27,7 @@
     }
   },
   "rules": { 
+    "no-trailing-spaces":"error",
     "jsx-quotes": [ "error", "prefer-double" ],
     "import-quotes/import-quotes": [1, "single"],
     "array-bracket-spacing": [ 2, "never" ],

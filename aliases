@@ -37,6 +37,7 @@ alias pss=$SCRIPTS_PATH/paste-screenshot.sh
 #GIT
 alias gb='git --no-pager branch'
 alias gbo=$SCRIPTS_PATH/gbo.js
+alias gborc=$SCRIPTS_PATH/gborc.js
 alias gc='git checkout'
 alias gcap=$SCRIPTS_PATH/gcap.js
 alias gcb='git checkout -b'
@@ -46,7 +47,7 @@ alias gcp='git cherry-pick'
 alias gd='git diff origin/master'
 alias gdb='git checkout master && git branch -D'
 alias gdbb=$SCRIPTS_PATH/gdbb.js
-alias gdh='git diff HEAD'
+alias gdh="git diff HEAD -- ':(exclude)package-lock.json'"
 alias gdrb='git push --delete origin'
 alias gfp=$SCRIPTS_PATH/git_fix_push.sh
 alias gl=$SCRIPTS_PATH/gl.sh

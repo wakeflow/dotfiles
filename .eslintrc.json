@@ -27,6 +27,7 @@
     }
   },
   "rules": { 
+    "no-trailing-spaces":"error",
     "eol-last": ["error", "always"],
     "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 1 }],
     "import-quotes/import-quotes": [1, "single"],
