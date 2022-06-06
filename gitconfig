@@ -1,3 +1,5 @@
 [user]
 	name = Andreas
 	email = andi@wakeflow.io
+[alias]
+	gl = log --oneline --decorate --graph --all -n 15

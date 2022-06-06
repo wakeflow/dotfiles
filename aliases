@@ -3,11 +3,16 @@ SCRIPTS_PATH=~/Dev/dotfiles/scripts
 alias '$'=''
 alias '..'='cd ..'
 
+# python
+alias python=python3
+alias jn="jupyter notebook"
+
 # Node
 alias nm=nodemon
 alias ccc='node /Users/andreaskater/Dev/ccc/ccc.js'
 alias aaa='node /Users/andreaskater/Dev/ccc/aaa.js'
 alias comp='$SCRIPTS_PATH/createComponent.js'
+alias js='$SCRIPTS_PATH/createJsFile.js'
 
 # General
 alias x=clear
@@ -16,17 +21,6 @@ alias cc=clear
 alias copy=pbcopy
 alias ls='ls -1a'
 
-# Wakeflow
-alias rtlf="node /Users/andreaskater/Dev/wakeflow/transfers/cli/rtlf.js"
-alias rtla="node /Users/andreaskater/Dev/wakeflow/transfers/cli/rtla.js"
-alias ltrf="node /Users/andreaskater/Dev/wakeflow/transfers/cli/ltrf.js"
-alias ltra="node /Users/andreaskater/Dev/wakeflow/transfers/cli/ltra.js"
-
-# Firebase
-alias emul='firebase emulators:start --import=firestore_import --export-on-exit=firestore_import'
-alias emulf='firebase emulators:start --only functions'
-alias emulocal='firebase emulators:start --import=emulator-backup --export-on-exit=emulator-backup'
-
 # Feathersjs
 alias fgs='feathers generate service'
 
@@ -34,32 +28,12 @@ alias fgs='feathers generate service'
 alias mc=$SCRIPTS_PATH/mc.sh
 alias pss=$SCRIPTS_PATH/paste-screenshot.sh
 
-#GIT
-alias gb='git --no-pager branch'
-alias gbo=$SCRIPTS_PATH/gbo.js
-alias gborc=$SCRIPTS_PATH/gborc.js
-alias gc='git checkout'
-alias gcap=$SCRIPTS_PATH/gcap.js
-alias gcb='git checkout -b'
-alias gcm='git add --all && git commit -m'
-alias gcmp=$SCRIPTS_PATH/gcmp.js
-alias gcp='git cherry-pick'
-alias gd='git diff origin/master'
-alias gdb='git checkout master && git branch -D'
-alias gdbb=$SCRIPTS_PATH/gdbb.js
-alias gdh="git diff HEAD -- ':(exclude)package-lock.json'"
-alias gdrb='git push --delete origin'
-alias gfp=$SCRIPTS_PATH/git_fix_push.sh
-alias gl=$SCRIPTS_PATH/gl.sh
-alias gmp=$SCRIPTS_PATH/gmp.js
-alias gpr='hub pull-request -p --no-edit'
-alias grbi='git rebase -i'
-alias grc='git add . && git rebase --continue'
-alias grhom='git reset --hard origin/master'
-alias gs='git status'
-alias gsf='git show --pretty="" --name-only'
-alias gu=$SCRIPTS_PATH/gu.js
-alias gpup=$SCRIPTS_PATH/gpup.js
+# Terraform
+alias tf=terraform
+
+# Docker
+alias dcu='docker compose up'
+alias dcd='docker compose down'
 
 #Tree
 alias t=tree
@@ -71,3 +45,11 @@ alias v=vim
 #ZSH
 alias relaod=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+
+#zero44
+alias dbpw='aws rds generate-db-auth-token --hostname "zero44-staging.czpz0cmcraqt.eu-central-1.rds.amazonaws.com" --port "5432" --region eu-central-1 --username "zero44_staging_readonly" | pbcopy'
+alias om="overmind start -f Procfile.nginx.dev"
+
+#revcontent
+alias brc="bit create react --env envs/apex-env --scope revcontent.apex"
+alias brctoken="export CODEARTIFACT_AUTH_TOKEN=$(aws codeartifact get-authorization-token --domain codeartifact-default --query authorizationToken --output text --profile revcontent --region us-east-1)"
