@@ -10,9 +10,11 @@ source $ZSH/oh-my-zsh.sh
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
-#NVM node version manager
+
+#nvm node version manager
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # vim
 export EDITOR='vim'
@@ -31,3 +33,6 @@ export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME:$PATH"
 export PATH="$PATH:/usr/local/bin"
 export PATH="/usr/local/opt/curl/bin:$PATH"
+
+#brew
+eval "$(/opt/homebrew/bin/brew shellenv)"
