@@ -19,7 +19,6 @@ welcoming space for collaboration, and contributors are expected to adhere to th
    - `ln -s ~/dotfiles/vimrc ~/.vimrc`
    - `ln -s ~/dotfiles/zshrc ~/.zshrc`
    - `ln -s ~/dotfiles/aliases ~/.aliases`
-   - `ln -s ~/dotfiles/gitconfig ~/.gitconfig`
    - `ln -s ~/dotfiles/oh-my-zsh ~/.oh-my-zsh`
     
 3. If you use VSCode, set up symlinks to the settings.json and keybindings.json files:
