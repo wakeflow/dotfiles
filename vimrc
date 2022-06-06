@@ -49,7 +49,6 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 " APPEARANCE
 " --------------------
 syntax enable
-colorscheme solarized
 " switch background
 if has('gui_running')
   set background=light

@@ -15,18 +15,15 @@ welcoming space for collaboration, and contributors are expected to adhere to th
    - MacOs/Linux: `brew install zsh`
    - Windows: `apt install zsh`
 
-2. Install hub:
-   - MacOs/Linux: `brew install hub`
-   - Windows: `scoop install hub`
-
-3. Set up symlinks in your home directory the following files: 
-   - `ln -s ~/.vimrc ~/projects/vimrc`
-   - `ln -s ~/.zshrc ~/projects/zshrc`
-   - `ln -s ~/.aliases ~/projects/aliases`
+2. Set up symlinks in your home directory to the following files (this assumes you cloned the dotfiles repo into the ~/dotfiles folder): 
+   - `ln -s ~/dotfiles/vimrc ~/.vimrc`
+   - `ln -s ~/dotfiles/zshrc ~/.zshrc`
+   - `ln -s ~/dotfiles/aliases ~/.aliases`
+   - `ln -s ~/dotfiles/gitconfig ~/.gitconfig`
     
-4. If you use VSCode, set up symlinks to the settings.json and keybindings.json files:
-   - `ln -s ~/Library/Application Support/Code/User/settings.json ~/projects/settings.json`
-   - `ln -s ~/Library/Application Support/Code/User/keybindings.json ~/projects/keybindings.json`
+3. If you use VSCode, set up symlinks to the settings.json and keybindings.json files:
+   - `ln -s ~/Dev/dotfiles/vscode/settings.json "~/Library/Application Support/Code/User/settings.json"`
+   - `ln -s ~/Dev/dotfiles/vscode/keybindings.json "~/Library/Application Support/Code/User/keybindings.json"`
 
 ## License
 
