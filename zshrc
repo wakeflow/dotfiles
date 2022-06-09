@@ -7,10 +7,6 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# aliases
-[[ -f ~/.aliases ]] && source ~/.aliases
-
-
 #nvm node version manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
@@ -33,6 +29,17 @@ export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME:$PATH"
 export PATH="$PATH:/usr/local/bin"
 export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 #brew
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# aliases
+[[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f ~/.aliases_local ]] && source ~/.aliases_local
+
+# {WAKEFLOW-ALIASES
+if [ -f ~/wakeflow-scripts/aliases ]; then
+  . ~/wakeflow-scripts/aliases
+fi
+# WAKEFLOW-ALIASES}

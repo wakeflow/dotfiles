@@ -22,8 +22,9 @@ welcoming space for collaboration, and contributors are expected to adhere to th
    - `ln -s ~/dotfiles/oh-my-zsh ~/.oh-my-zsh`
     
 3. If you use VSCode, set up symlinks to the settings.json and keybindings.json files:
-   - `ln -s ~/Dev/dotfiles/vscode/settings.json "~/Library/Application Support/Code/User/settings.json"`
-   - `ln -s ~/Dev/dotfiles/vscode/keybindings.json "~/Library/Application Support/Code/User/keybindings.json"`
+   - `ln -s ~/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json`
+   - `ln -s ~/dotfiles/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json`
+   - `ln -s ~/dotfiles/vscode/snippets/consoleLog.code-snippets ~/Library/Application\ Support/Code/User/snippets/consoleLog.code-snippets`
 
 ## License
 

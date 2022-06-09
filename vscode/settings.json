@@ -92,7 +92,6 @@
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
-  "breadcrumbs.enabled": false,
   "vscodeGoogleTranslate.preferredLanguage": "fr",
   // "[javascript]": {
   //   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
@@ -124,5 +123,6 @@
     "jupyter-notebook": "left"
   },
   "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
-  "terminal.integrated.enableMultiLinePasteWarning": false
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "window.zoomLevel": 1
 }

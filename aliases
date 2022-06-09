@@ -2,7 +2,6 @@ alias '$'=''
 alias '..'='cd ..'
 
 # python
-alias python=python3
 alias jn="jupyter notebook"
 
 # Node
@@ -33,17 +32,6 @@ alias dcd='docker compose down'
 alias t=tree
 alias tree="tree -I 'node_modules|venv'"
 
-#VIM
-alias v=vim
-
 #ZSH
 alias relaod=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
-
-#zero44
-alias dbpw='aws rds generate-db-auth-token --hostname "zero44-staging.czpz0cmcraqt.eu-central-1.rds.amazonaws.com" --port "5432" --region eu-central-1 --username "zero44_staging_readonly" | pbcopy'
-alias om="overmind start -f Procfile.nginx.dev"
-
-#revcontent
-alias brc="bit create react --env envs/apex-env --scope revcontent.apex"
-alias brctoken="export CODEARTIFACT_AUTH_TOKEN=$(aws codeartifact get-authorization-token --domain codeartifact-default --query authorizationToken --output text --profile revcontent --region us-east-1)"
